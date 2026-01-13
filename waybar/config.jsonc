@@ -1,0 +1,105 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 28,
+    "spacing": 0,
+    "modules-left": [
+        "sway/workspaces",
+        "sway/mode",
+        "sway/scratchpad",
+        "sway/window"
+
+    ],
+    "modules-center": [
+    ],
+    "modules-right": [
+        "idle_inhibitor",
+        "cpu",
+        "memory",
+        "battery",
+        "power-profiles-daemon",
+        "pulseaudio",
+        "backlight",
+        "clock",
+        "tray"
+    ],
+    "sway/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "format": "{name}"
+    },
+    "sway/mode": {
+        "format": "MODE: {}"
+    },
+    "sway/scratchpad": {
+        "format": "STASH: {count}",
+        "show-empty": false
+    },
+    "sway/window": {
+        "format": "{title}",
+        "max-length": 30
+    },
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "AWAKE",
+            "deactivated": "SLEEP"
+        }
+    },
+    "pulseaudio": {
+        "format": "VOL {volume}%",
+        "format-muted": "MUTE",
+        "on-click": "pavucontrol"
+    },
+    "network": {
+        "format-wifi": "WIFI",
+        "format-ethernet": "ETH",
+        "format-disconnected": "OFF"
+    },
+    "power-profiles-daemon": {
+        "format": "{icon}",
+        "format-icons": {
+            "default": "AUTO",
+            "performance": "PERF",
+            "balanced": "BAL",
+            "power-saver": "SAVE"
+        }
+    },
+    "cpu": {
+        "format": "CPU {usage}%"
+    },
+    "memory": {
+        "format": "RAM {percentage}%"
+    },
+    "temperature": {
+        "critical-threshold": 80,
+        "format": "{temperatureC}C"
+    },
+    "backlight": {
+            "format": "BRI {percent}%"
+    },
+    "sway/language": {
+        "format": "LANG {short}"
+    },
+    "battery": {
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "BAT {capacity}%",
+        "format-charging": "CHRG {capacity}%",
+        "format-plugged": "FULL {capacity}%"
+    },
+    "clock": {
+        "format": "{:%H:%M}",
+        "tooltip-format": "<tt>{calendar}</tt>"
+    },
+    "tray": {
+        "icon-size": 14,
+        "spacing": 12
+    },
+    "custom/sep": {
+        "format": "|",
+        "tooltip": false
+    }
+}

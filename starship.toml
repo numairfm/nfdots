@@ -1,0 +1,60 @@
+palette = "custom"
+
+format = '''\[[$username$shell](fg)\] \[[$directory](pink)\] $git_branch $git_status
+$character'''
+
+[palettes.custom]
+bg = "#111111"
+fg = "#d1d1d1"
+pink = "#b39091"
+muted = "#444444"
+
+[line_break]
+disabled = true
+
+[character]
+success_symbol = "[>](bold pink)"
+error_symbol = "[>](bold red)"
+
+[username]
+show_always = true
+style_user = "muted"
+format = "$user"
+
+[shell]
+disabled = false
+zsh_indicator = "zsh"
+style = "muted"
+format = "@$indicator"
+
+[directory]
+style = "pink"
+format = "$path"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[git_branch]
+symbol = "󰊢"
+style = "pink"
+format = "[$branch]($style)"
+
+[git_status]
+style = "muted"
+format = "[[$all_status$ahead_behind](muted)]($style)"
+conflicted = "="
+ahead = "⇡"
+behind = "⇣"
+diverged = "⇕"
+up_to_date = ""
+untracked = "?"
+stashed = "$"
+modified = "!"
+staged = "+"
+renamed = "»"
+deleted = "✘"
+
+[os]
+disabled = true
+
+[memory_usage]
+disabled = true
