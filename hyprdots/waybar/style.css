@@ -1,0 +1,99 @@
+@define-color bg      #111111; 
+@define-color fg      #d1d1d1; 
+@define-color pink    #b39091; 
+@define-color muted   #444444; 
+@define-color blk     #000000;
+
+* {
+    font-family: "JetBrainsMono Nerd Font", "JetBrains Mono", monospace;
+    font-size: 14px;
+    font-weight: 500;
+    border: none;
+    border-radius: 0;
+    transition: none;
+}
+
+window#waybar {
+    background-color: @bg;
+    color: @fg;
+    border-bottom: 1px solid @muted;
+}
+
+/* Hyprland Workspace Selectors */
+#workspaces button {
+    color: @muted;
+    padding: 0 10px;
+    background: transparent;
+}
+
+#workspaces button:hover {
+    color: @pink;
+    background-color: rgba(179, 144, 145, 0.1);
+}
+
+/* Hyprland uses 'active' for the current workspace */
+#workspaces button.active {
+    color: @pink;
+    background-color: rgba(179, 144, 145, 0.05);
+    border-bottom: 2px solid @pink;
+}
+
+#workspaces button.active:hover {
+    color: @bg;
+    background-color: @pink;
+}
+
+#workspaces button.urgent {
+    color: @bg;
+    background-color: @pink;
+}
+
+#window {
+    color: @pink;
+    font-style: italic;
+    padding: 0 14px;
+}
+
+#idle_inhibitor,
+#pulseaudio,
+#backlight,
+#battery,
+#network,
+#clock,
+#tray,
+#cpu,
+#memory,
+#language,
+#submap, 
+#power-profiles-daemon {
+    padding: 0 12px;
+    color: @fg;
+    border-left: 1px solid rgba(209, 209, 209, 0.1);
+}
+
+#clock {
+    font-weight: bold;
+    color: @pink;
+}
+
+#tray {
+    background-color: rgba(179, 144, 145, 0.05);
+    padding: 0 10px;
+}
+
+/* Context Menu Styling */
+menu {
+    background: @bg;
+    border: 1px solid @muted;
+    padding: 4px;
+}
+
+menuitem {
+    color: @fg;
+    padding: 4px 12px;
+}
+
+menuitem:hover {
+    background-color: @pink;
+    color: @bg;
+}

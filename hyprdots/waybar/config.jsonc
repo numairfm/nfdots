@@ -1,0 +1,90 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 28,
+    "spacing": 0,
+    "modules-left": [
+        "hyprland/workspaces",
+        "hyprland/submap", 
+        "hyprland/window"
+    ],
+    "modules-center": [],
+    "modules-right": [
+        "idle_inhibitor",
+        "cpu",
+        "memory",
+        "battery",
+        "power-profiles-daemon",
+        "pulseaudio",
+        "backlight",
+        "clock",
+        "tray"
+    ],
+
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "format": "{name}",
+        "on-click": "activate"
+    },
+
+    "hyprland/submap": {
+        "format": "MODE: {}"
+    },
+
+    "hyprland/window": {
+        "format": "{title}",
+        "max-length": 30,
+        "separate-outputs": true
+    },
+
+    "hyprland/language": {
+        "format": "LANG {short}",
+        "keyboard-name": "at-translated-set-2-keyboard" // Note: run 'hyprctl devices' to find your exact name
+    },
+
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "AWAKE",
+            "deactivated": "SLEEP"
+        }
+    },
+
+    "pulseaudio": {
+        "format": "VOL {volume}%",
+        "format-muted": "MUTE",
+        "on-click": "pavucontrol"
+    },
+
+    "power-profiles-daemon": {
+        "format": "{icon}",
+        "format-icons": {
+            "default": "AUTO",
+            "performance": "PERF",
+            "balanced": "BAL",
+            "power-saver": "SAVE"
+        }
+    },
+
+    "cpu": { "format": "CPU {usage}%" },
+    "memory": { "format": "RAM {percentage}%" },
+    "backlight": { "format": "BRI {percent}%" },
+
+    "battery": {
+        "states": { "warning": 30, "critical": 15 },
+        "format": "BAT {capacity}%",
+        "format-charging": "CHRG {capacity}%",
+        "format-plugged": "FULL {capacity}%"
+    },
+
+    "clock": {
+        "format": "{:%H:%M}",
+        "tooltip-format": "<tt>{calendar}</tt>"
+    },
+
+    "tray": {
+        "icon-size": 14,
+        "spacing": 12
+    }
+}
