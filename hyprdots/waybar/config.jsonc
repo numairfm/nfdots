@@ -1,8 +1,11 @@
 {
     "layer": "top",
     "position": "top",
-    "height": 28,
+    "height": 32,
     "spacing": 0,
+    "margin-top": 8,
+    "margin-left": 10,
+    "margin-right": 10,
     "modules-left": [
         "hyprland/workspaces",
         "hyprland/submap", 
@@ -40,7 +43,7 @@
 
     "hyprland/language": {
         "format": "LANG {short}",
-        "keyboard-name": "at-translated-set-2-keyboard" // Note: run 'hyprctl devices' to find your exact name
+        "keyboard-name": "at-translated-set-2-keyboard" 
     },
 
     "idle_inhibitor": {
